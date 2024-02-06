@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Target : MonoBehaviour
 {
     private Rigidbody itemRb;
+    public float minSpeed = 12;
+    public float maxSpeed = 16;
+    public float maxTorque = 10; 
+    public float xRange = 4;
+    public float ySapwnPos = -6;
+
     // Start is called before the first frame update
     void Start()
     {
         itemRb = GetComponent<Rigidbody>();
-        itemRb.AddForce (Vector3.up * Random.Range(12,16), ForceMode.Impluse); 
-        itemRb.AddTorque(Random.Range(-10,10), Random.Range(-10,10), Random.Range(-10,10), ForceMode.Impluse);
-        transform.position = new Vector3(Random.Range(-4,4), -6); 
+        itemRb.AddForce (RandomForce(), ForceMode.Impulse); 
+        itemRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
+        transform.position = RandomSpawnPos(); 
     }
 
     // Update is called once per frame
@@ -22,8 +28,27 @@ public class NewBehaviourScript : MonoBehaviour
 
     Vector3 RandomForce()
     {
-        return Vector3.up * Random.Range(12,16);
+        return Vector3.up * Random.Range(minSpeed, maxSpeed);
     } 
-    
-        
+
+    Vector3 RandomSpawnPos()
+    {
+       return new Vector3(Random.Range(-xRange,xRange), ySapwnPos); 
+    }
+
+    float RandomTorque()
+    {
+       return Random.Range(-maxTorque, maxTorque);
+    }
+
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter()
+    {
+         Destroy(gameObject);
+    }
+
 }
