@@ -10,6 +10,9 @@ public class Target : MonoBehaviour
     public float maxTorque = 10; 
     public float xRange = 4;
     public float ySapwnPos = -6;
+    private ItemSpawner itemSpawner; 
+    public int pointscore; 
+    public ParticleSystem explosionParticle; 
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +20,8 @@ public class Target : MonoBehaviour
         itemRb = GetComponent<Rigidbody>();
         itemRb.AddForce (RandomForce(), ForceMode.Impulse); 
         itemRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
-        transform.position = RandomSpawnPos(); 
+        transform.position = RandomSpawnPos();
+        itemSpawner = GameObject.Find("Item Spawner").GetComponent<ItemSpawner>(); 
     }
 
     // Update is called once per frame
@@ -44,6 +48,8 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        itemSpawner.UpdateScore(pointscore);
     }
 
     private void OnTriggerEnter()

@@ -130,3 +130,6 @@ MonoBehaviour:
   maxTorque: 10
   xRange: 4
   ySapwnPos: -6
+  pointscore: -1
+  explosionParticle: {fileID: 2088871590894813759, guid: 745208c9d6e104225bd99e1ab894e3bb,
+    type: 3}
