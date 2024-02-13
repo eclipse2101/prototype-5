@@ -47,14 +47,21 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if(itemSpawner.gameActive)
+        {
         Destroy(gameObject);
         Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         itemSpawner.UpdateScore(pointscore);
+        }
     }
 
     private void OnTriggerEnter()
     {
          Destroy(gameObject);
+         if (!gameObject.CompareTag("Bad"))
+         {
+            itemSpawner.GameOver();
+         }
     }
 
 }
