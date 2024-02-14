@@ -56,12 +56,12 @@ public class Target : MonoBehaviour
     }
 
     private void OnTriggerEnter()
-    {
-         Destroy(gameObject);
+    { 
          if (!gameObject.CompareTag("Bad"))
          {
             itemSpawner.GameOver();
          }
+         Destroy(gameObject);
     }
 
 }
