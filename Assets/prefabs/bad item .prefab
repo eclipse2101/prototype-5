@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7565376214233777878}
   - component: {fileID: -350163660374461666}
   - component: {fileID: -8650389507763932613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'bad item '
   m_TagString: Bad
   m_Icon: {fileID: 0}
