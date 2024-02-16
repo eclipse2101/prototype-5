@@ -207,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 22586260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 22586262}
+        m_TargetAssemblyTypeName: DifficultyButton, Assembly-CSharp
+        m_MethodName: SetDiffuclty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &22586260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 22586257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04b9e19ed2164a1ca2b8c8730389cbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e3ca9ff50594434393f6d7680ac2a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Difficulty: 2
@@ -660,7 +672,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 512241930}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512241932}
+        m_TargetAssemblyTypeName: DifficultyButton, Assembly-CSharp
+        m_MethodName: SetDiffuclty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &512241930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +732,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 512241927}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04b9e19ed2164a1ca2b8c8730389cbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e3ca9ff50594434393f6d7680ac2a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Difficulty: 4
@@ -1282,7 +1306,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 578856388}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578856390}
+        m_TargetAssemblyTypeName: DifficultyButton, Assembly-CSharp
+        m_MethodName: SetDiffuclty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &578856388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,7 +1366,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 578856385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04b9e19ed2164a1ca2b8c8730389cbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e3ca9ff50594434393f6d7680ac2a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Difficulty: 3
@@ -1417,7 +1453,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 616531609}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 616531611}
+        m_TargetAssemblyTypeName: DifficultyButton, Assembly-CSharp
+        m_MethodName: SetDiffuclty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &616531609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,7 +1513,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 616531606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04b9e19ed2164a1ca2b8c8730389cbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e3ca9ff50594434393f6d7680ac2a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Difficulty: 1

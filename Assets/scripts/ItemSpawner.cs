@@ -32,12 +32,13 @@ public class ItemSpawner : MonoBehaviour
     
     public void StartGame(int Difficulty)
     {
-        spawnRate /= Difficulty;
+        
         StartCoroutine(SpawnTarget());
         score = 0;
         UpdateScore(0); 
         gameActive = true;
-        titleScreen.gameObject.SetActive(false);   
+        titleScreen.gameObject.SetActive(false); 
+        spawnRate /= Difficulty;
     }
     
     public void RestartGame()
