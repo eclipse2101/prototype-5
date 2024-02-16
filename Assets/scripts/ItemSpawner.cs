@@ -13,16 +13,14 @@ public class ItemSpawner : MonoBehaviour
     public TextMeshProUGUI textScore; 
     public TextMeshProUGUI gameOverScreen; 
     public Button restartButton; 
-    public bool gameActive; 
+    public bool gameActive;
+    public GameObject titleScreen; 
 
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnTarget());
-        score = 0;
-        UpdateScore(0); 
-        gameActive = true;
+        
     }
 
     public void GameOver()
@@ -30,6 +28,16 @@ public class ItemSpawner : MonoBehaviour
         gameOverScreen.gameObject.SetActive(true);
         gameActive = false;
         restartButton.gameObject.SetActive(true);
+    }
+    
+    public void StartGame(int Difficulty)
+    {
+        spawnRate /= Difficulty;
+        StartCoroutine(SpawnTarget());
+        score = 0;
+        UpdateScore(0); 
+        gameActive = true;
+        titleScreen.gameObject.SetActive(false);   
     }
     
     public void RestartGame()

@@ -52,12 +52,22 @@ public class Target : MonoBehaviour
         Destroy(gameObject);
         Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         itemSpawner.UpdateScore(pointscore);
+         
+         if (gameObject.CompareTag("Instant death"))
+         {
+            itemSpawner.GameOver();
+         }
+
         }
     }
 
     private void OnTriggerEnter()
     { 
          if (!gameObject.CompareTag("Bad"))
+         {
+            itemSpawner.GameOver();
+         }
+         if (!gameObject.CompareTag("Instant death"))
          {
             itemSpawner.GameOver();
          }
