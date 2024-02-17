@@ -13,6 +13,7 @@ public class Target : MonoBehaviour
     private ItemSpawner itemSpawner; 
     public int pointscore; 
     public ParticleSystem explosionParticle; 
+    public bool isBad; 
 
     // Start is called before the first frame update
     void Start()
@@ -61,17 +62,16 @@ public class Target : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     { 
-         if (!gameObject.CompareTag("Bad"))
-         {
-            itemSpawner.GameOver();
-         }
-         if (!gameObject.CompareTag("Instant death"))
-         {
-            itemSpawner.GameOver();
-         }
          Destroy(gameObject);
+         
+         if (isBad == false)
+         {
+              itemSpawner.GameOver();
+              Debug.Log("A good item was dropped ");
+         }
+
     }
 
 }

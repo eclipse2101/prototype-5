@@ -120,6 +120,7 @@ MonoBehaviour:
   pointscore: 0
   explosionParticle: {fileID: 4758139293545943008, guid: c7ad2532a6eeb40b59033c75e71fa054,
     type: 3}
+  isBad: 1
 --- !u!65 &3736656753782463100
 BoxCollider:
   m_ObjectHideFlags: 0
