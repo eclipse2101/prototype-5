@@ -7,7 +7,7 @@ public class DifficultyButton : MonoBehaviour
 {
     private Button ModeChanger; 
     private ItemSpawner ItemSpawner; 
-    public int Difficulty; 
+    public float Difficulty; 
     
     // Start is called before the first frame update
     void Awake()

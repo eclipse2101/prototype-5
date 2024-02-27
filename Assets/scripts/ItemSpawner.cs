@@ -30,7 +30,7 @@ public class ItemSpawner : MonoBehaviour
         restartButton.gameObject.SetActive(true);
     }
     
-    public void StartGame(int Difficulty)
+    public void StartGame(float Difficulty)
     {
         
         StartCoroutine(SpawnTarget());

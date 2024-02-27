@@ -64,14 +64,17 @@ public class Target : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     { 
-         Destroy(gameObject);
-         
-         if (isBad == true)
+          if (isBad == false)
          {
               itemSpawner.GameOver();
               Debug.Log("A good item was dropped ");
          }
+         else
+         {
+            Debug.Log("A bad item has dropped");
+         }
 
+      Destroy(gameObject);
     }
 
 }
