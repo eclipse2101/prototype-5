@@ -120,6 +120,7 @@ MonoBehaviour:
   pointscore: 3
   explosionParticle: {fileID: 2088871590894813759, guid: 745208c9d6e104225bd99e1ab894e3bb,
     type: 3}
+  isBad: 0
 --- !u!65 &8291351022257038785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -131,5 +132,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46739918, y: 0.08559368, z: 0.6615112}
-  m_Center: {x: 0, y: 0.04279684, z: 0}
+  m_Size: {x: 0.5102414, y: 0.23776372, z: 0.6982331}
+  m_Center: {x: -0.0006120205, y: 0.055715866, z: 0}
