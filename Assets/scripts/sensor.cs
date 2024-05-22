@@ -22,12 +22,13 @@ public class sensor : MonoBehaviour
     { 
          if (!gameObject.CompareTag("Bad"))
          {
-            itemSpawner.GameOver();
+            itemSpawner.Health--;
          }
          if (!gameObject.CompareTag("Instant death"))
          {
-            itemSpawner.GameOver();
+            itemSpawner.Health--;
          }
          Destroy(gameObject);
+         Debug.Log(itemSpawner.Health);
     }
 }

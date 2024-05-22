@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ItemSpawner : MonoBehaviour
 {
     public float spawnRate = 1; 
+    public int Health = 3; 
     public List<GameObject> targets; 
     private int score; 
     public TextMeshProUGUI textScore; 
@@ -15,6 +16,7 @@ public class ItemSpawner : MonoBehaviour
     public Button restartButton; 
     public bool gameActive;
     public GameObject titleScreen; 
+    public TextMeshProUGUI healthUi; 
 
     
     // Start is called before the first frame update
@@ -49,7 +51,15 @@ public class ItemSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Health == 0)
+        {
+         GameOver();
+        }
         
+        if(gameActive == true || Health >= 0)
+        {
+         healthUi.text = "Health: " + Health;
+        }
     }
 
     IEnumerator SpawnTarget()
@@ -65,6 +75,6 @@ public class ItemSpawner : MonoBehaviour
     public void UpdateScore (int scoreToAdd)
     {
        score += scoreToAdd;
-       textScore.text = "Score:" + score;
+       textScore.text = "Score: " + score;
     }
 }

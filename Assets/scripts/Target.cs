@@ -66,7 +66,7 @@ public class Target : MonoBehaviour
     { 
           if (isBad == false)
          {
-              itemSpawner.GameOver();
+              itemSpawner.Health--;
               Debug.Log("A good item was dropped ");
          }
          else
