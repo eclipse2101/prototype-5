@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class musicVolume : MonoBehaviour
+public class MusicVolume : MonoBehaviour
 {
     public Slider mainSlider;
 
