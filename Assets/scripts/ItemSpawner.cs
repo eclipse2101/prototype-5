@@ -17,6 +17,8 @@ public class ItemSpawner : MonoBehaviour
     public bool gameActive;
     public GameObject titleScreen; 
     public TextMeshProUGUI healthUi; 
+    public TextMeshProUGUI PauseScreen; 
+    public bool Paused; 
 
     
     // Start is called before the first frame update
@@ -51,6 +53,7 @@ public class ItemSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ///////Health/////////////
         if (Health == 0)
         {
          GameOver();
@@ -60,6 +63,23 @@ public class ItemSpawner : MonoBehaviour
         {
          healthUi.text = "Health: " + Health;
         }
+        ///////Pause Function//////
+        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+          if(gameActive == true && Paused == false)
+          {
+          TimeStop(); // pause the game 
+          }
+        else
+           {
+            TimeResume(); // resume the game
+           }
+        }
+        
+        /*
+        editors note: ZA WARUDO STOP TIME
+        */
     }
 
     IEnumerator SpawnTarget()
@@ -76,5 +96,18 @@ public class ItemSpawner : MonoBehaviour
     {
        score += scoreToAdd;
        textScore.text = "Score: " + score;
+    }
+    public void TimeStop()
+    {
+       Paused = true;
+       Time.timeScale = 0f;
+       PauseScreen.gameObject.SetActive(true);
+    }
+
+    public void TimeResume()
+    {
+       Paused = false;
+       Time.timeScale = 1f;
+       PauseScreen.gameObject.SetActive(false);
     }
 }
