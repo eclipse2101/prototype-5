@@ -16,6 +16,7 @@ public class MusicBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(jukebox.mainSlider.value);
         gameAudio.volume = jukebox.mainSlider.value;  
     }
 }

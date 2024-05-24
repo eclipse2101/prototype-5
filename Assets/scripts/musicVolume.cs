@@ -16,7 +16,7 @@ public class MusicVolume : MonoBehaviour
     // Invoked when the value of the slider changes.
     public void ValueChangeCheck()
     {
-        Debug.Log(mainSlider.value);
+        //Debug.Log(mainSlider.value);
     }
 
     
