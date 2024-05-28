@@ -9,10 +9,11 @@ public class TitleChanger : MonoBehaviour
     private Button ScreenChanger1;
     public TextMeshProUGUI ScreenUno;
     public TextMeshProUGUI ScreenDuo;
-    public bool isButtonWorking = true;
+    public bool TitleScreen = true;
     private AudioSource buttonSound;
     public AudioClip errorSound;
     public AudioClip selectSound;
+    public Button ExitButton; 
 
     
     // Start is called before the first frame update
@@ -36,15 +37,18 @@ public class TitleChanger : MonoBehaviour
 
     public void ScreenChange()
     {
-        if (isButtonWorking == true)
+        if (TitleScreen == true)
         {
          ScreenDuo.gameObject.SetActive(true);
          ScreenUno.gameObject.SetActive(false);
+         ExitButton.gameObject.SetActive(false);
          //buttonSound.PlayOneShot(selectSound, 1.5f);
         }
         else
         {
-           buttonSound.PlayOneShot(errorSound, 3.0f); 
+           ScreenDuo.gameObject.SetActive(true);
+         ScreenUno.gameObject.SetActive(false);
+         ExitButton.gameObject.SetActive(true);
         }
     
         /*

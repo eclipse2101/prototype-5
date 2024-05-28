@@ -18,6 +18,7 @@ public class ItemSpawner : MonoBehaviour
     public GameObject titleScreen; 
     public TextMeshProUGUI healthUi; 
     public TextMeshProUGUI PauseScreen; 
+    public Button ExitButton; 
     public bool Paused; 
 
     
@@ -32,6 +33,7 @@ public class ItemSpawner : MonoBehaviour
         gameOverScreen.gameObject.SetActive(true);
         gameActive = false;
         restartButton.gameObject.SetActive(true);
+        ExitButton.gameObject.SetActive(true);
     }
     
     public void StartGame(float Difficulty)
@@ -41,7 +43,8 @@ public class ItemSpawner : MonoBehaviour
         score = 0;
         UpdateScore(0); 
         gameActive = true;
-        titleScreen.gameObject.SetActive(false); 
+        titleScreen.gameObject.SetActive(false);
+        ExitButton.gameObject.SetActive(false); 
         spawnRate /= Difficulty;
     }
     
@@ -102,6 +105,7 @@ public class ItemSpawner : MonoBehaviour
        Paused = true;
        Time.timeScale = 0f;
        PauseScreen.gameObject.SetActive(true);
+       ExitButton.gameObject.SetActive(true); 
     }
 
     public void TimeResume()
@@ -109,5 +113,6 @@ public class ItemSpawner : MonoBehaviour
        Paused = false;
        Time.timeScale = 1f;
        PauseScreen.gameObject.SetActive(false);
+       ExitButton.gameObject.SetActive(false); 
     }
 }
