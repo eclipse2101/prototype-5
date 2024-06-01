@@ -106,6 +106,7 @@ public class ItemSpawner : MonoBehaviour
        Time.timeScale = 0f;
        PauseScreen.gameObject.SetActive(true);
        ExitButton.gameObject.SetActive(true); 
+      // restartButton.gameObject.SetActive(true);
     }
 
     public void TimeResume()
@@ -114,5 +115,6 @@ public class ItemSpawner : MonoBehaviour
        Time.timeScale = 1f;
        PauseScreen.gameObject.SetActive(false);
        ExitButton.gameObject.SetActive(false); 
+       restartButton.gameObject.SetActive(false);
     }
 }
